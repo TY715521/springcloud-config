@@ -1,0 +1,23 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:mysql://192.168.6.131:3306/shopping_db?characterEncoding=UTF8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    database: mysql
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8888/eureka
+  instance:
+    prefer-ip-address: true
